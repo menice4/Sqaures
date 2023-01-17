@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color:black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +10,7 @@ body {
 }
 canvas {
   display: block;
-  outline: 10px solid white;
+  background: white;
+  outline: 5px dotted  white;
 
 }
