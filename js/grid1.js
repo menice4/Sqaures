@@ -3,7 +3,7 @@ function setup() {
     createCanvas(800, 800);
     let x = 0;
     let y = 0;
-    let xVariation =0;
+    let xVariation = 0;
     let yVariation = 0;
     let widthVariation = 0;
     let heightVariation = 0;
