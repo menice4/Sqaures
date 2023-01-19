@@ -12,24 +12,28 @@ function preload() {
 function setup() {
   createCanvas(800, 800);
 
-  const CELL_SIZE = 160;
+  const CELL_SIZE = 50;
   let x = 0;
   let y = 0;
   let sizes = [CELL_SIZE, CELL_SIZE * 2, CELL_SIZE * 3];
   
 
-  let colours = [color("#f9f4dc"), color("#4c242d"), color("#cb4306"), color("#802147"), color("#fa8b2e"), color("#ab9594"), color("#a15b71"), color("#9f381d"), color("#5c5c5c")]
+  let colours = [color("#f72585"), color("#b5179e"), color("#7209b7"), color("#560bad"), color("#480ca8"),color("#3a0ca3"),color("#3f37c9"),color("#4361ee"),color("#4895ef"),color("#4cc9f0")]
   noStroke();
 
   
   while (y < height) {
+    fill(random(colours))
+    triangle(x-CELL_SIZE/2, y, x+CELL_SIZE/2, y, x,y+CELL_SIZE)
     while (x < width) {
       fill(random(colours))
       
-      rect( x, y, CELL_SIZE,CELL_SIZE);
-      tint(random(colours))
-      let t = random(textures);
-      image(t, x, y, CELL_SIZE,CELL_SIZE);
+      // triangles( x, y, CELL_SIZE,CELL_SIZE);
+      triangle(x, y+CELL_SIZE, x+CELL_SIZE, y+CELL_SIZE, x+CELL_SIZE/2, y)
+      fill(random(colours))
+      triangle(x+CELL_SIZE/2, y,x+CELL_SIZE, y +CELL_SIZE ,x+CELL_SIZE*1.5, y)
+      circle( x+25, y+25, CELL_SIZE/3,CELL_SIZE/3);
+    
       x += CELL_SIZE
 
     }
